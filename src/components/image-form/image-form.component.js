@@ -10,6 +10,7 @@ const ImageForm = () => {
           title='Paste Image URL'
           placeholder='Paste Image URL'
         />
+        <img className='search-icon' alt='search icon' src='/images/search.svg' />
       </div>
     </form>
   );

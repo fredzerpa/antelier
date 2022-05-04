@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
 
+  
   .bar {
     margin: 0 auto;
     width: 90%;
@@ -12,14 +13,22 @@
     border-radius: 30px;
     border: 1px solid #dcdcdc;
     overflow: hidden;
+    position: relative;
 
     &:focus-within {
       box-shadow: 3px 3px 8px 3px #464c53;
       outline: none;
     }
 
+    .search-icon {
+      position: absolute;
+      right: 1.5rem;
+      top: .75rem;
+    }
+  
+
     .searchbar {
-      padding: 0 2rem;
+      padding: 0 4rem 0 2rem;
       height: 45px;
       border: none;
       width: 100%;
