@@ -3,9 +3,9 @@ import './image-form.styles.scss';
 const ImageForm = () => {
   return (
     <form className='image-form'>
-      <div class='bar'>
+      <div className='bar'>
         <input
-          class='searchbar'
+          className='searchbar'
           type='text'
           title='Paste Image URL'
           placeholder='Paste Image URL'
