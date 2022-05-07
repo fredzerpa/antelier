@@ -1,9 +1,11 @@
 .image-form {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   
+  // Searchbar
   .bar {
     margin: 0 auto;
     width: 90%;
@@ -34,5 +36,12 @@
       font-size: large;
       outline: none;
     }
+  }
+
+  // Image Box
+  .image-display-box {
+    width: 800px;
+    max-width: 90%;
+    // height: 500px;
   }
 }

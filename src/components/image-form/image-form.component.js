@@ -15,7 +15,9 @@ const ImageForm = () => {
       </div>
 
       {/* Image Display Box */}
-      
+      <article className='image-display-box'>
+        
+      </article>
     </form>
   );
 };
