@@ -20,7 +20,12 @@ const HomePage = () => {
     <main className='homepage'>
       {/* Background */}
       <Particles id='tsparticles-bg' g options={snowPreset} />
-
+      
+      {/* Navegation */}
+      <header>
+        <nav></nav>
+      </header>
+      
       {/* Logo */}
       <section className='logo'>
         <img alt='Antelier Logo' className='logo' src='logo.svg' />
@@ -32,7 +37,7 @@ const HomePage = () => {
       </section>
 
       {/* Face Recognition */}
-      <section className='image-form'>
+      <section className='image-display'>
         <ImageForm />
       </section>
     </main>
