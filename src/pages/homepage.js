@@ -15,22 +15,23 @@ const HomePage = () => {
   };
 
   return (
-    <div className='homepage'>
+    <main className='homepage'>
       {/* Background */}
       <Particles id='tsparticles-b' g options={snowPreset} />
-      <Particles
-        id='tsparticles-logo'
-        options={faceMask}
-        loaded={particlesLoaded}
-      />
-      <main>
+      {/* Content */}
+      <section>
         {/* Logo */}
         <img alt='Antelier Logo' className='logo' src='logo.svg' />
+        <Particles
+          id='tsparticles-logo'
+          options={faceMask}
+          loaded={particlesLoaded}
+        />
 
         {/* Face Recognition */}
         <ImageForm />
-      </main>
-    </div>
+      </section>
+    </main>
   );
 };
 

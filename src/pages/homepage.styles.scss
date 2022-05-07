@@ -3,7 +3,7 @@ $distance: 3rem;
   height: 100vh;
   padding: $distance 0;
 
-  & > main {
+  & > section {
     height: calc(100% - $distance);
     padding-top: $distance;
     display: flex;

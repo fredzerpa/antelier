@@ -3,6 +3,7 @@ import './image-form.styles.scss';
 const ImageForm = () => {
   return (
     <form className='image-form'>
+      {/* Searchbar */}
       <div className='bar'>
         <input
           className='searchbar'
@@ -12,6 +13,9 @@ const ImageForm = () => {
         />
         <img className='search-icon' alt='search icon' src='/images/components/search.svg' />
       </div>
+
+      {/* Image Display Box */}
+      
     </form>
   );
 };
