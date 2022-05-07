@@ -23,7 +23,7 @@ const faceMask = {
   },
   particles: {
     color: {
-      value: '#ff0000',
+      value: '#00f1ff',
       animation: {
         enable: true,
         speed: 5,
