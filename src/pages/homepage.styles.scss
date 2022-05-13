@@ -1,13 +1,15 @@
 $distance: 3rem;
 .homepage {
   height: 100vh;
+  overflow-y: auto;
+  padding: $distance 0;
 
   header {
     height: 10%;
     width: 100%;
   }
 
-  section.logo {
+  section#logo {
     height: 75%;
     padding-top: $distance;
     display: flex;
@@ -29,7 +31,7 @@ $distance: 3rem;
     }
   }
 
-  section.image-display {
+  section#image-display {
     width: 100%;
   }
 }

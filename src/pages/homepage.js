@@ -10,8 +10,6 @@ import ImageForm from '../components/image-form/image-form.component';
 
 const HomePage = () => {
   const particlesLoaded = container => {
-    console.log(container);
-
     // Override canvas element style
     container.canvas.element.style.position = 'absolute';
   };
@@ -27,7 +25,7 @@ const HomePage = () => {
       </header>
       
       {/* Logo */}
-      <section className='logo'>
+      <section id='logo'>
         <img alt='Antelier Logo' className='logo' src='logo.svg' />
         <Particles
           id='tsparticles-logo'
@@ -37,7 +35,7 @@ const HomePage = () => {
       </section>
 
       {/* Face Recognition */}
-      <section className='image-display'>
+      <section id='image-display'>
         <ImageForm />
       </section>
     </main>
