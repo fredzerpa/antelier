@@ -4,35 +4,38 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { useForm } from 'react-hook-form';
 
-import ImageDisplayBox from '../image-display-box/image-display-box.component';
+const REGEX_URL_VALIDATION =
+  /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=+$,\w]+@)?[A-Za-z0-9-]+|(?:www\.|[-;:&=+$,\w]+@)[A-Za-z0-9.-]+)((?:\/[+~%/.\w\-_]*)?\??(?:[-+=&;%@.\w_]*)#?(?:[.!/\\\w]*))?)/;
 
-const ImageForm = () => {
+const ImageForm = ({ setImageUrl }) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-    clearErrors,
   } = useForm();
 
-  const onSubmit = data => console.log(data);
-
-  const handleChange = e => clearErrors(['imageUrl']);
-
   return (
-    <form className='image-form' onSubmit={handleSubmit(onSubmit)}>
+    <form
+      className='image-form'
+      onSubmit={handleSubmit(({ imageUrl }) => setImageUrl(imageUrl))}
+    >
       {/* Searchbar */}
       <div className='bar'>
         <input
           {...register('imageUrl', {
-            required: true,
-            pattern:
+            pattern: {
               // RegEx URL validation
-              /[(http(s)?)://(www.)?a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)/gi,
+              value: REGEX_URL_VALIDATION,
+            },
+            validate: {
+              // No empty data
+              value: data => data !== '',
+            },
           })}
           className='searchbar'
           type='text'
           placeholder='Paste Image URL'
-          onChange={handleChange}
+          // onChange={handleChange}
         />
         <button className='search-icon' type='submit'>
           <FontAwesomeIcon icon={faMagnifyingGlass} />
@@ -40,13 +43,9 @@ const ImageForm = () => {
       </div>
 
       {/* React Form Validation */}
-      {(errors.imageUrl?.type === 'pattern' ||
-        errors.imageUrl?.type === 'required') && (
+      {errors.imageUrl?.type === 'pattern' && (
         <span className='error-message'>Invalid URL</span>
       )}
-
-      {/* Image Display Box */}
-      <ImageDisplayBox imageUrl={null} />
     </form>
   );
 };

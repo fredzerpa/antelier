@@ -1,9 +1,9 @@
 import './image-display-box.styles.scss';
 
-const ImageDisplayBox = ({imageURL}) => {
+const ImageDisplayBox = ({ imageUrl }) => {
   return (
     <article className='image-display-box'>
-      <img alt='Searched' src={imageURL} />
+      <img alt='Searched' src={imageUrl} loading='lazy' />
     </article>
   );
 };
