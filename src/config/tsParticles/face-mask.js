@@ -1,6 +1,6 @@
 const faceMask = {
   detectRetina: false,
-  fpsLimit: 60,
+  fpsLimit: 30,
   fullscreen: false,
   interactivity: {
     detectsOn: 'canvas',
@@ -26,7 +26,7 @@ const faceMask = {
       value: '#00f1ff',
       animation: {
         enable: true,
-        speed: 5,
+        speed: 1,
         sync: true,
       },
     },
@@ -52,13 +52,13 @@ const faceMask = {
       enable: true,
       outMode: 'bounce',
       random: true,
-      speed: 0.25,
+      speed: 0.15,
       straight: false,
     },
     number: {
       density: {
         enable: false,
-        area: 2000,
+        area: 2,
       },
       limit: 0,
       value: 300,
@@ -94,7 +94,7 @@ const faceMask = {
       lineWidth: 0.3,
     },
     move: {
-      radius: 2,
+      // radius: 2,
     },
     inlineArrangement: 'equidistant',
     scale: 0.5,
