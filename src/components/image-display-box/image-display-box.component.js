@@ -1,6 +1,6 @@
 import './image-display-box.styles.scss';
 
-const ImageDisplayBox = ({ imageUrl }) => {
+const VideoDisplayBox = ({ imageUrl }) => {
   return (
     <article className='image-display-box'>
       <img alt='Searched' src={imageUrl} loading='lazy' />
@@ -8,4 +8,4 @@ const ImageDisplayBox = ({ imageUrl }) => {
   );
 };
 
-export default ImageDisplayBox;
+export default VideoDisplayBox;

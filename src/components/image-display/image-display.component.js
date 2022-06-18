@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react';
 import './image-display.styles.scss';
 
 // Components
-import ImageDisplayBox from '../image-display-box/image-display-box.component';
+import VideoDisplayBox from '../image-display-box/image-display-box.component';
 import ImageForm from '../image-form/image-form.component';
 
-const ImageDisplay = () => {
+const VideoDisplay = () => {
   const [imageUrl, setImageUrl] = useState();
 
   useEffect(() => {
@@ -17,9 +17,9 @@ const ImageDisplay = () => {
       {/* Url Searchbar */}
       <ImageForm setImageUrl={setImageUrl} />
       {/* Image Box */}
-      {imageUrl ? <ImageDisplayBox imageUrl={imageUrl} /> : null}
+      {imageUrl ? <VideoDisplayBox imageUrl={imageUrl} /> : null}
     </section>
   );
 };
 
-export default ImageDisplay;
+export default VideoDisplay;
