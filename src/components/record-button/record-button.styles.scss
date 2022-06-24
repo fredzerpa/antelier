@@ -1,0 +1,55 @@
+.button-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Spin animation
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#play {
+  cursor: pointer;
+}
+
+.stroke-dotted {
+  opacity: 0;
+  stroke-dasharray: 4, 5;
+  stroke-width: 1px;
+  transform-origin: 50% 50%;
+  transition: opacity 1s ease, stroke-width 1s ease;
+}
+.stroke-solid {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 300;
+  stroke-width: 4px;
+  transition: stroke-dashoffset 1s ease, opacity 1s ease;
+}
+
+.start-icon {
+  transform-origin: 50% 50%;
+}
+
+.stop-icon {
+  display: none;
+  transform-origin: -2.5% -3%;
+  transform: scale(2.5);
+}
+
+// Animate
+#play.animate {
+  .stroke-dotted {
+    stroke-width: 4px;
+    opacity: 1;
+    animation: spin 4s infinite linear;
+  }
+  .stroke-solid {
+    opacity: 0;
+    stroke-dashoffset: 300;
+  }
+}
