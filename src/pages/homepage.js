@@ -6,7 +6,7 @@ import snowPreset from '../config/tsParticles/snow';
 
 // Components
 import Logo from '../components/logo/logo.component';
-import VideoDisplay from '../components/image-display/image-display.component';
+import VideoDisplay from '../components/video-display/video-display.component';
 
 const HomePage = () => {
   return (
