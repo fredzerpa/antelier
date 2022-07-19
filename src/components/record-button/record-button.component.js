@@ -1,22 +1,25 @@
 import './record-button.styles.scss';
 
-const toggleAnimation = (e) => {
-  const recordBtn = document.getElementById('play');
-  const startIcon = document.querySelector('.start-icon');
-  const stopIcon = document.querySelector('.stop-icon');
 
-  if (recordBtn.hasAttribute('class')) {
-    recordBtn.removeAttribute('class');
-    stopIcon.style.display = 'none';
-    startIcon.style.display = 'initial';
-  } else {
-    recordBtn.classList.add('animate');
-    startIcon.style.display = 'none';
-    stopIcon.style.display = 'initial';
+const RecordButton = ({ startVideo }) => {
+  const toggleAnimation = (e) => {
+    const recordBtn = document.getElementById('play');
+    const startIcon = document.querySelector('.start-icon');
+    const stopIcon = document.querySelector('.stop-icon');
+
+    if (recordBtn.hasAttribute('class')) {
+      recordBtn.removeAttribute('class');
+      stopIcon.style.display = 'none';
+      startIcon.style.display = 'initial';
+      startVideo(false);
+    } else {
+      recordBtn.classList.add('animate');
+      startIcon.style.display = 'none';
+      stopIcon.style.display = 'initial';
+      startVideo(true);
+    }
+
   }
-}
-
-const RecordButton = () => {
 
   return (
     <div className='button-container'>
