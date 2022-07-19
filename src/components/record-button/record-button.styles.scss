@@ -1,5 +1,5 @@
 .button-container {
-  height: 20vh;
+  height: calc(20vh);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -57,6 +57,6 @@
 // Phones screen
 @media only screen and (max-width: 767px) {
   .button-container {
-    margin-bottom: 2rem;
+    margin: 1rem 0;
   }
 }
