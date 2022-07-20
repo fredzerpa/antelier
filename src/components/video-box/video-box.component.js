@@ -11,10 +11,10 @@ const VideoBox = () => {
   useEffect(() => {
     setInitializing(true);
     Promise.all([
-      faceapi.nets.tinyFaceDetector.loadFromUri("/models"),
-      faceapi.nets.faceLandmark68Net.loadFromUri("/models"),
-      faceapi.nets.faceRecognitionNet.loadFromUri("/models"),
-      faceapi.nets.faceExpressionNet.loadFromUri("/models")
+      faceapi.nets.tinyFaceDetector.loadFromUri(process.env.PUBLIC_URL + "/models"),
+      faceapi.nets.faceLandmark68Net.loadFromUri(process.env.PUBLIC_URL + "/models"),
+      faceapi.nets.faceRecognitionNet.loadFromUri(process.env.PUBLIC_URL + "/models"),
+      faceapi.nets.faceExpressionNet.loadFromUri(process.env.PUBLIC_URL + "/models")
     ]).then(startVideo);
   }, []);
 

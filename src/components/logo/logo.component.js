@@ -1,7 +1,7 @@
 import './logo.styles.scss';
 
 import Particles from 'react-tsparticles';
-import faceMask from '../../config/tsParticles/face-mask';
+import faceMask from '../../config/tsParticles/face-mask.particles';
 
 const Logo = () => {
   const particlesLoaded = container => {
@@ -11,7 +11,7 @@ const Logo = () => {
 
   return (
     <section id='logo'>
-      <img alt='Antelier Logo' className='logo' src='logo.svg' />
+      <img alt='Antelier Logo' className='logo' src={process.env.PUBLIC_URL + '/logo.svg'} />
       <Particles
         id='tsparticles-logo'
         options={faceMask}

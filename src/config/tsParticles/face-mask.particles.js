@@ -99,7 +99,7 @@ const faceMask = {
     inlineArrangement: 'equidistant',
     scale: 0.5,
     type: 'inline',
-    url: '/images/tsparticles/smalldeer.svg',
+    url: process.env.PUBLIC_URL + '/images/tsparticles/smalldeer.svg',
   },
 };
 

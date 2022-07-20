@@ -2,7 +2,7 @@ import './homepage.styles.scss';
 
 // Particles
 import Particles from 'react-tsparticles';
-import snowPreset from '../config/tsParticles/snow';
+import snowPreset from '../config/tsParticles/snow.particles';
 
 // Components
 import Logo from '../components/logo/logo.component';
